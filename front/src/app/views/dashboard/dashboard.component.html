@@ -17,12 +17,20 @@
               <th scope="col">Fecha Ingreso</th>
             </tr>
           </thead>
-          <tbody></tbody>
+          <tbody>
+            <tr *ngFor="let producto of productos; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ producto.Nombre }}</td>
+              <td>{{ producto.Precio }}</td>
+              <td>{{ producto.Cantidad }}</td>
+              <td>{{ producto.FechaIngreso }}</td>
+            </tr>
+          </tbody>
         </table>
       </c-col>
     </c-row>
-
-    <c-row>
+  </c-card-body>
+  <!--  <c-row>
       <c-col sm="5">
         <h4 class="card-title mb-0" id="traffic">Traffic</h4>
         <div class="small text-medium-emphasis">January - December 2021</div>
@@ -474,5 +482,5 @@
         </table>
       </c-card-body>
     </c-card>
-  </c-col>
-</c-row>
+  </c-col>-->
+</c-card>

@@ -1,7 +1,7 @@
 export interface IProductos {
-  productoId: number;
-  nombre: string;
-  precio: number;
-  cantidad: number;
-  fecha?: Date;
+  ProductoId: number;
+  Nombre: string;
+  Precio: number;
+  Cantidad: number;
+  FechaIngreso?: Date;
 }

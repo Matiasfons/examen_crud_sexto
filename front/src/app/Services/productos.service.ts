@@ -20,17 +20,17 @@ export class ProductosService {
   }
   insertar(producto: IProductos): Observable<any> {
     var prod = new FormData();
-    prod.append('nombre', producto.nombre);
-    prod.append('precio', producto.precio.toString());
-    prod.append('stock', producto.cantidad.toString());
+    prod.append('nombre', producto.Nombre);
+    prod.append('precio', producto.Precio.toString());
+    prod.append('stock', producto.Cantidad.toString());
     return this.cliente.post(this.urlBase + 'insertar', prod);
   }
   actualizar(producto: IProductos): Observable<any> {
     var prod = new FormData();
-    prod.append('id', producto.productoId.toString());
-    prod.append('nombre', producto.nombre);
-    prod.append('precio', producto.precio.toString());
-    prod.append('stock', producto.cantidad.toString());
+    prod.append('id', producto.ProductoId.toString());
+    prod.append('nombre', producto.Nombre);
+    prod.append('precio', producto.Precio.toString());
+    prod.append('stock', producto.Cantidad.toString());
     return this.cliente.post(this.urlBase + 'actualizar', prod);
   }
   eliminar(id: number): Observable<any> {
