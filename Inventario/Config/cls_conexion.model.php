@@ -9,7 +9,7 @@ class Clase_Conectar_Base_Datos
     /**
      * XAMPP  password = '';
      */
-    private $dbname = "Sexto";
+    private $dbname = "Inventario_Sexto";
 
     public function ProcedimientoConectar()
     {
@@ -25,6 +25,5 @@ class Clase_Conectar_Base_Datos
 
         if (!$this->db) die("Error en la seleccion de la base de datos" . mysqli_error($this->conexion));
         return $this->conexion;
-
     }
 }

@@ -3,6 +3,27 @@
   <c-card-body>
     <c-row>
       <c-col sm="5">
+        <h4 class="card-title mb-0" id="traffic">Lista</h4>
+        <div class="small text-medium-emphasis">Lista de Productos</div>
+      </c-col>
+      <c-col class="d-none d-md-block" sm="7">
+        <table cTable>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Fecha Ingreso</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </c-col>
+    </c-row>
+
+    <c-row>
+      <c-col sm="5">
         <h4 class="card-title mb-0" id="traffic">Traffic</h4>
         <div class="small text-medium-emphasis">January - December 2021</div>
       </c-col>
@@ -24,7 +45,8 @@
               cFormCheckLabel
               color="secondary"
               variant="outline"
-            >Day</label>
+              >Day</label
+            >
 
             <input
               class="btn-check"
@@ -38,7 +60,8 @@
               cFormCheckLabel
               color="secondary"
               variant="outline"
-            >Month</label>
+              >Month</label
+            >
 
             <input
               class="btn-check"
@@ -52,11 +75,13 @@
               cFormCheckLabel
               color="secondary"
               variant="outline"
-            >Year</label>
+              >Year</label
+            >
           </c-button-group>
         </form>
       </c-col>
     </c-row>
+
     <c-chart
       [data]="mainChart.data"
       [height]="300"
@@ -239,7 +264,9 @@
                 <span>New clients</span>
                 &nbsp;&nbsp;
                 <sup>
-                  <span class="badge badge-pill badge-sm bg-danger">&nbsp;</span>
+                  <span class="badge badge-pill badge-sm bg-danger"
+                    >&nbsp;</span
+                  >
                 </sup>
                 <span>Recurring clients</span>
               </small>
@@ -249,13 +276,17 @@
           <c-col md="6" xl="6" xs="12">
             <c-row>
               <c-col sm="6">
-                <div class="border-start border-start-4 border-start-warning py-1 px-3 mb-3">
+                <div
+                  class="border-start border-start-4 border-start-warning py-1 px-3 mb-3"
+                >
                   <div class="text-medium-emphasis small">Page views</div>
                   <div class="fs-5 fw-semibold">78,623</div>
                 </div>
               </c-col>
               <c-col sm="6">
-                <div class="border-start border-start-4 border-start-success py-1 px-3 mb-3">
+                <div
+                  class="border-start border-start-4 border-start-success py-1 px-3 mb-3"
+                >
                   <div class="text-medium-emphasis small">Organic</div>
                   <div class="fs-5 fw-semibold">49,123</div>
                 </div>
