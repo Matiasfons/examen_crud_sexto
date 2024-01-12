@@ -25,4 +25,17 @@ export class ProveedorService {
     prov.append('proveedorId', id.toString());
     return this.clientePhp.post(this.urlBase + 'eliminar', prov);
   }
+  uno(id: number): Observable<IProveedor> {
+    var prov = new FormData();
+    prov.append('proveedorId', id.toString());
+    return this.clientePhp.post<IProveedor>(this.urlBase + 'uno', prov);
+  }
+  actualizar(proveedor: IProveedor, id: number): Observable<any> {
+    var prov = new FormData();
+    prov.append('proveedorId', id.toString());
+    prov.append('Nombres', proveedor.Nombres);
+    prov.append('Telefono', proveedor.Telefono);
+    prov.append('Correo', proveedor.Correo);
+    return this.clientePhp.post(this.urlBase + 'actualizar', prov);
+  }
 }

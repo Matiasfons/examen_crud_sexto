@@ -30,7 +30,11 @@
             <td>{{ proveedor.Telefono }}</td>
             <td>{{ proveedor.Correo }}</td>
             <td>
-              <button type="button" class="btn btn-outline-warning">
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                routerLink="/editar-proveedor/{{ proveedor.ProveedorId }}"
+              >
                 Editar
               </button>
               <button

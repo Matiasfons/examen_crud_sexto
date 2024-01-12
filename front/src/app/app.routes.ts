@@ -23,6 +23,10 @@ export const routes: Routes = [
     component: NuevoProveedorComponent,
   },
   {
+    path: 'editar-proveedor/:id',
+    component: NuevoProveedorComponent,
+  },
+  {
     path: 'stocks',
     component: StocksComponent,
   },
