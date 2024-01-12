@@ -5,6 +5,7 @@ import { ProductosComponent } from './Views/productos/productos.component';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 import { ProveedoresComponent } from './Views/proveedores/proveedores.component';
 import { StocksComponent } from './Views/stocks/stocks.component';
+import { NuevoProveedorComponent } from './Views/proveedores/nuevo-proveedor/nuevo-proveedor.component';
 
 export const routes: Routes = [
   {
@@ -16,6 +17,10 @@ export const routes: Routes = [
   {
     path: 'proveedores',
     component: ProveedoresComponent,
+  },
+  {
+    path: 'nuevo-proveedor',
+    component: NuevoProveedorComponent,
   },
   {
     path: 'stocks',

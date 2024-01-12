@@ -33,7 +33,11 @@
               <button type="button" class="btn btn-outline-warning">
                 Editar
               </button>
-              <button type="button" class="btn btn-outline-danger">
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+                (click)="eliminar(proveedor.ProveedorId)"
+              >
                 Eliminar
               </button>
             </td>
@@ -48,3 +52,4 @@
     </div>
   </div>
 </div>
+<button (click)="alerta()">mensaje</button>

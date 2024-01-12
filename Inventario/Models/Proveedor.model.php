@@ -35,7 +35,8 @@ class Clase_Proveedor
         try {
             $con = new Clase_Conectar_Base_Datos();
             $con = $con->ProcedimientoConectar();
-            $cadena = "INSERT INTO `Proveedores`( `Nombre`, `Telefono`, `Correo`) VALUES ('$Nombre','$Telefono',$Correo)";
+            $cadena = "INSERT INTO `Proveedores`( `Nombres`, `Telefono`, `Correo`) VALUES ('$Nombre','$Telefono','$Correo')";
+
             $result = mysqli_query($con, $cadena);
             return 'ok';
         } catch (Throwable $th) {

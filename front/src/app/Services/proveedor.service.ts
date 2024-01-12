@@ -13,4 +13,16 @@ export class ProveedorService {
   todos(): Observable<IProveedor[]> {
     return this.clientePhp.get<IProveedor[]>(this.urlBase + 'todos');
   }
+  insertar(proveedor: IProveedor): Observable<any> {
+    var prov = new FormData();
+    prov.append('Nombres', proveedor.Nombres);
+    prov.append('Telefono', proveedor.Telefono);
+    prov.append('Correo', proveedor.Correo);
+    return this.clientePhp.post(this.urlBase + 'insertar', prov);
+  }
+  eliminar(id: number): Observable<any> {
+    var prov = new FormData();
+    prov.append('proveedorId', id.toString());
+    return this.clientePhp.post(this.urlBase + 'eliminar', prov);
+  }
 }
