@@ -22,7 +22,7 @@ export class ProveedoresComponent {
   cargaTabla() {
     this.proveedoresServicio.todos().subscribe((listaproveedores) => {
       this.proveedores = listaproveedores;
-      console.log(listaproveedores);
+      console.log(this.proveedores);
     });
   }
   alerta() {

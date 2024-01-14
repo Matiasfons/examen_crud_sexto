@@ -21,7 +21,7 @@ class Clase_Productos
         try {
             $con = new Clase_Conectar_Base_Datos();
             $con = $con->ProcedimientoConectar();
-            $cadena = "SELECT * FROM `Productos` WHERE ProductoId=$ProductoId";
+            $cadena = "SELECT * FROM `Productos` WHERE ProductoId='$ProductoId'";
             $result = mysqli_query($con, $cadena);
             return $result;
         } catch (Throwable $th) {
@@ -35,7 +35,7 @@ class Clase_Productos
         try {
             $con = new Clase_Conectar_Base_Datos();
             $con = $con->ProcedimientoConectar();
-            $cadena = "INSERT INTO `Productos`( `Nombre`, `Precio`, `Cantidad`, `FechaIngreso`) VALUES ('$Nombre','$Precio',$Cantidad,CURDATE())";
+            $cadena = "INSERT INTO `Productos`( `Nombre`, `Precio`, `Cantidad`, `FechaIngreso`) VALUES ('$Nombre','$Precio','$Cantidad',CURDATE())";
 
             $result = mysqli_query($con, $cadena);
 
@@ -51,7 +51,7 @@ class Clase_Productos
         try {
             $con = new Clase_Conectar_Base_Datos();
             $con = $con->ProcedimientoConectar();
-            $cadena = "UPDATE `Productos` SET `Nombre`='$Nombre',`Precio`='$Precio',`Cantidad`='$Cantidad',`FechaIngreso`='GETDATE()' WHERE `ProductoId`=$ProductoId";
+            $cadena = "UPDATE `Productos` SET `Nombre`='$Nombre',`Precio`='$Precio',`Cantidad`='$Cantidad',`FechaIngreso`=CURDATE() WHERE `ProductoId`='$ProductoId'";
             $result = mysqli_query($con, $cadena);
             return "ok";
         } catch (Throwable $th) {
