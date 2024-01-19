@@ -1,0 +1,51 @@
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">{{ title }}</h6>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="usuario" (ngSubmit)="grabar()">
+      <div class="mb-2">
+        <label for="Nombre">Nombre</label>
+        <input type="text" class="form-control" formControlName="Nombre" />
+        @if (usuario.invalid && (usuario.dirty || usuario.touched)) {
+        <div class="alert">
+          @if (usuario.errors?.["required"]) {
+          <div class="ng-invalid">Nombre es requerido</div>
+          }
+        </div>
+        }
+      </div>
+      <div class="mb-2">
+        <label for="Correo">Correo</label>
+        <input type="email" class="form-control" formControlName="Correo" />
+        @if (usuario.invalid && (usuario.dirty || usuario.touched)) {
+
+        }
+      </div>
+      <div class="mb-2">
+        <label for="Contrasena">Contraseña</label>
+        <input type="text" class="form-control" formControlName="Contrasena" />
+        @if (usuario.invalid && (usuario.dirty || usuario.touched)) {
+        <div class="alert">
+          @if (usuario.errors?.["required"]) {
+          <div class="ng-invalid">Contrasena es requerido</div>
+          }
+        </div>
+        }
+      </div>
+
+      <div class="mb-2">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="!usuario.valid"
+        >
+          Grabar
+        </button>
+        <button class="btn btn-secondary" routerLink="/usuarios">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

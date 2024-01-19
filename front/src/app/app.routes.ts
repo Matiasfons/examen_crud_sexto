@@ -2,53 +2,42 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { ProductosComponent } from './views/productos/productos.component';
-import { ProveedoresComponent } from './views/proveedores/proveedores.component';
-import { NuevoProveedorComponent } from './views/proveedores/nuevo-proveedor/nuevo-proveedor.component';
-import { StocksComponent } from './views/stocks/stocks.component';
-import { NuevoProductoComponent } from './views/productos/nuevo-producto/nuevo-producto.component';
-import { NuevoStockComponent } from './views/stocks/nuevo-stock/nuevo-stock.component';
+
+// import { NuevoStockComponent } from './views/stocks/nuevo-stock/nuevo-stock.component';
+import { PublicacionesComponent } from './views/publicaciones/publicaciones.component';
+import { NuevoPublicacionComponent } from './views/publicaciones/nuevo-publicacion/nuevo-publicacion.component';
+import { UsuariosComponent } from './views/usuarios/usuarios.component';
+import { NuevoUsuarioComponent } from './views/usuarios/nuevo-usuario/nuevo-usuario.component';
 
 export const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
   },
-  { path: 'productos', component: ProductosComponent },
+  { path: 'publicaciones', component: PublicacionesComponent },
+
+  { path: 'usuarios', component: UsuariosComponent },
 
   {
-    path: 'proveedores',
-    component: ProveedoresComponent,
+    path:'nuevo-publicacion',
+    component:NuevoPublicacionComponent
   },
   {
-    path: 'nuevo-proveedor',
-    component: NuevoProveedorComponent,
-  },
-  {
-    path:'nuevo-producto',
-    component:NuevoProductoComponent
-  },
-  {
-    path:'nuevo-stock',
-    component:NuevoStockComponent
-  },
-  {
-    path:'editar-stock/:id',
-    component:NuevoStockComponent
-  },
-  {
-    path: 'editar-producto/:id',
-    component: NuevoProductoComponent,
-  },
-  {
-    path: 'editar-proveedor/:id',
-    component: NuevoProveedorComponent,
+    path:'nuevo-usuario',
+    component:NuevoUsuarioComponent
   },
 
   {
-    path: 'stocks',
-    component: StocksComponent,
+    path: 'editar-publicacion/:id',
+    component: NuevoPublicacionComponent,
   },
+  {
+    path: 'editar-usuario/:id',
+    component: NuevoUsuarioComponent,
+  },
+
+
+
   { path: 'login', component: LoginComponent },
   { path: '**', component: PageNotFoundComponentComponent },
 ];
